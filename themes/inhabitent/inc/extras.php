@@ -32,12 +32,12 @@ add_action( 'admin_menu', 'inhabitent_remove_submenus', 110 );
 
 //login logo
 function inhabitent_login_logo() {
-	echo '<style type="text/css">                                                                   
-			h1 a { 
-				background-image:url('.get_stylesheet_directory_uri().'/images/inhabitent-logo-text-dark.svg) !important;
-				background-size: contain !important;
-				height: 50px !important;
-				width: 300px !important;}                            
+	echo '<style type="text/css">
+			#login h1 a { 
+				background-image:url('.get_stylesheet_directory_uri().'/images/inhabitent-logo-text-dark.svg);
+				background-size: contain;
+				height: 50px;
+				width: 300px; }                            
 	</style>';
 }
 add_action('login_head', 'inhabitent_login_logo');
@@ -51,3 +51,28 @@ function inhabitent_login_logo_url_title(){
 	return 'Inhabitent';
 }
 add_filter('login_headertitle', 'inhabitent_login_logo_url_title');
+
+//dynamic css
+function inhabitent_dynamic_css() {
+	
+	if ( ! is_page_template( 'page_templates/about.php') ) {
+		return;
+	}
+	
+	$image = CFS()->get( 'about_header_image' );
+
+	if ( ! $image ) {
+		return;
+	}
+	
+	$hero_css = ".page-template-about .entry-header {
+		background:
+			linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+			url({$image}) no-repeat center bottom;
+		background-size: cover;
+		height: 100vh;
+	}";
+	
+	wp_add_inline_style( 'inhabitent-style' , $hero_css );
+}
+add_action( 'wp_enqueue_scripts', 'inhabitent_dynamic_css');

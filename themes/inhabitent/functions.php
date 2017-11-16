@@ -1,6 +1,6 @@
 <?php
 /**
- * RED Starter Theme functions and definitions.
+ * Inhabitent Theme functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -83,7 +83,9 @@ add_filter( 'stylesheet_uri', 'inhabitent_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function inhabitent_scripts() {
+
 	wp_enqueue_script('font-awesome', 'https://use.fontawesome.com/51c3393f45.js',array(), '' , false);
+
 	wp_enqueue_style( 'inhabitent-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'inhabitent-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );

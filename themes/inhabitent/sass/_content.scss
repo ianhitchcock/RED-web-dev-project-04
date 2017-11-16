@@ -21,10 +21,14 @@
 	display: inline;
 }
 
+.site-content {
+	width: 1000px;
+	margin: 0 auto;
+}
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: $base__space-unit 0 0;
+	margin: 0;
 }
 
 .page-links {
@@ -46,4 +50,27 @@
 }
 .bypostauthor {
 	display: block;
+}
+/*--------------------------------------------------------------
+# Front Page Previews
+--------------------------------------------------------------*/
+.blog-preview {
+	display: flex;
+	height: 500px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	justify-content: space-between;
+	flex-flow: row wrap;
+	& h1 {
+		flex: 0 0 100%;
+	}
+	&-item {
+		flex: 0 0 32%;
+		& .thumbnail-wrapper {
+			width: 100%;
+			height: 200px;
+			overflow: hidden;
+		}
+	 }
 }
