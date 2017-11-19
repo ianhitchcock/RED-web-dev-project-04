@@ -22,7 +22,6 @@
 }
 
 .site-content {
-	width: 1000px;
 	margin: 0 auto;
 }
 .page-content,
@@ -52,25 +51,119 @@
 	display: block;
 }
 /*--------------------------------------------------------------
-# Front Page Previews
+# Header
 --------------------------------------------------------------*/
-.blog-preview {
-	display: flex;
-	height: 500px;
+
+.site-header {
+
+	position: fixed;
+	top: 0;
 	width: 100%;
-	margin: 0 auto;
-	text-align: center;
-	justify-content: space-between;
-	flex-flow: row wrap;
-	& h1 {
-		flex: 0 0 100%;
+	height: 50px;
+	padding: 0.333*$base__space-unit 0;
+	background-color: rgba(255,255,255,0.8);
+	color: $color__brand_1;
+	border-bottom: $border__solid;
+	z-index: 1000;
+	* {
+		margin: 0;
+		padding: 0;
 	}
-	&-item {
-		flex: 0 0 32%;
-		& .thumbnail-wrapper {
-			width: 100%;
-			height: 200px;
-			overflow: hidden;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		width: $base__max-width;
+		margin: 0 auto;
+	}
+	.site-branding {
+		width: 2.2*$base__space-unit;
+		
+	}
+	.main-navigation {
+		padding:0 0 0.333*$base__space-unit;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		* {
+			border: none;
+			background-color: inherit;
+			box-shadow: none;
 		}
-	 }
+		a , a:visited , button {
+			color: $color__brand_1;
+			font-family: $font__secondary;
+		}
+		a:focus , a:hover , button:hover {
+			color: $color__text-main;
+		}
+		ul {
+			width: 14*$base__space-unit;
+			display: flex;
+			justify-content: space-between;
+			align-content: center;
+			text-transform: uppercase;
+			padding-left: 1.25*$base__space-unit;
+		}
+		fieldset {
+			display: flex;
+			& label {
+				order: 2;
+				display: none;
+				transition: 0.5s;
+			}
+			button {
+				order: 0;
+				padding-left: $base__space-unit;
+				@include font-size(1);
+			}
+			//to override
+			.button-toggled {
+					& label {
+						display: initial;
+					}
+			}
+		}
+	}
+
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.site-footer {
+	background: url("../../images/dark-wood.png");
+	@media 
+	(-webkit-min-device-pixel-ratio: 2), 
+	(min-resolution: 192dpi) { 
+		background: url("../../images/dark-wood@2x.png");
+	}	
+	color: $color__background-body;
+	.site-info {
+		padding: $base__space-unit;
+		text-align: center;
+		font-family: $font__secondary;
+		text-transform: uppercase;
+	}
+	.container {
+		display: flex;
+		justify-content: space-between;
+		width: $base__max-width;
+		padding: 2*$base__space-unit 0 $base__space-unit;
+		margin: 0 auto;
+		h2 {
+			color: $color__brand_3;
+			font-family: $font__secondary;
+			text-transform: uppercase;
+			@include font-size(1.2);
+		}
+		p span {
+			font-weight: bold;
+		}
+		.site-branding {
+			flex: 0 0 25%;
+			padding-top: 0.666*$base__space-unit;
+		}
+	}
 }

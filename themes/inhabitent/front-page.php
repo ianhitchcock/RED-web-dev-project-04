@@ -10,7 +10,21 @@ get_header(); ?>
 	<div id="primary" class="content-area">
   
 		<main id="main" class="site-main" role="main">
-
+			<section class="hero-banner">	
+			<?php 
+			$image = wp_get_attachment_url( 96 ); 
+			echo "<style type='text/css'>
+				.hero-banner { 
+					background:
+					linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+					url({$image}) no-repeat center bottom;
+					background-size: cover;
+					height: 100vh;
+					width: 100vw;                         
+			</style>";
+			?>
+				<img class="logo" alt="logo" src="<?php echo get_template_directory_uri()?>/images/inhabitent-logo-full.svg">
+			</section>
 			<section class="product-info container">
 				<h2>Shop Stuff</h2>
 				<?php

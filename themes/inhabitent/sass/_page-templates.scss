@@ -1,5 +1,91 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-
 /* Front page */
+.page-id-29 {
+  
+  .hero-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .blog-preview {
+    display: flex;
+    height: 500px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    h1 {
+      flex: 0 0 100%;
+    }
+    &-item {
+      flex: 0 0 32%;
+      .thumbnail-wrapper {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+      }
+     }
+  }
+}
+
+/* Index */
+
+.blog {
+  
+  .site-content {
+    margin: 50px auto 0;
+    width: $base__max-width;  
+    display: flex;
+    .content-area {
+      flex: 0 0 73%;
+      padding: 2.333*$base__space-unit 2.333*$base__space-unit 2.333*$base__space-unit 0;
+      border-right: $border__solid;
+      .entry-header {
+        position: relative;
+        font-family: $font__secondary;
+        text-transform: uppercase;
+        color: $color__background-body;
+        a, a:visited {
+          text-decoration: none;
+          color: $color__background-body;
+        }
+        a:hover, a:focus {
+          color: $color__brand_4;
+        }
+      }
+      img {
+        width: 100%;
+      }
+      h2 {
+        position: absolute;
+        margin-top:1.5*$base__space-unit;
+        top: 0;
+        width: 75%;
+        background: $color__brand_1;
+        padding: 0.5*$base__space-unit $base__space-unit;
+        font-size: 1.4*$base__space-unit;
+        line-height: 1.25;
+        letter-spacing: 2px;
+      }
+      .entry-meta {
+        position: absolute;
+        bottom: 0.27*$base__space-unit;
+        right: 0;
+        line-height: 0; 
+        padding: 0.666*$base__space-unit $base__space-unit;
+        text-align: center;
+        background: $color__brand_1;
+        
+      }
+
+
+    }
+    .widget-area {
+      flex: 0 0 27%;
+      padding: 2.333*$base__space-unit 0 2.333*$base__space-unit 2.333*$base__space-unit;
+    }
+  }
+}

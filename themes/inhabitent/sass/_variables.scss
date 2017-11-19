@@ -1,6 +1,7 @@
 // Structure
 
 $base__space-unit: 1.5rem;
+$base__max-width: 1120px;
 
 // Colors
 
@@ -19,10 +20,23 @@ $color__link: royalblue;
 $color__link-visited: purple;
 $color__link-hover: midnightblue;
 
+$color__brand_1: #248A83; //green
+$color__brand_2: #2f1339; //purple
+$color__brand_3: #d99054; //orange
+$color__brand_4: #f0e4d1; //yellow
+$color__brand_5: #a1a1a1; //light grey
+$color__brand_6: #808080; //medium grey
+
+$border__solid: 1px solid #e1e1e1;
+$border__dashed: 1px dashed #c8c8c8;
+
 // Typography
 
-$font__main: sans-serif;
+$font__main: 'Merriweather', sans-serif;
+$font__secondary: '.', 'sans-serif';
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+
+

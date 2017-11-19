@@ -64,6 +64,15 @@ function inhabitent_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html( 'Footer' ),
+		'id'            => 'sidebar-2',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'inhabitent_widgets_init' );
 
@@ -135,10 +144,12 @@ function hwl_home_pagesize( $query ) {
 		return;
 	}
 
-	if ( is_post_type_archive( 'products' ) ) {
+	if ( is_post_type_archive( 'product' ) ) {
 			// Display 50 posts for a custom post type called products
 			$query->set( 'posts_per_page', 16 );
 			return;
 	}
 }
 add_action( 'pre_get_posts', 'hwl_home_pagesize', 1 );
+
+

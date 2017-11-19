@@ -71,6 +71,7 @@ function inhabitent_dynamic_css() {
 			url({$image}) no-repeat center bottom;
 		background-size: cover;
 		height: 100vh;
+		width: 100vw;
 	}";
 	
 	wp_add_inline_style( 'inhabitent-style' , $hero_css );
