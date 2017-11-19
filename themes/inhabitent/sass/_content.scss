@@ -127,6 +127,64 @@
 	}
 
 }
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+.widget-area {
+	h2 {
+		font-family: $font__secondary;
+		text-transform: uppercase;
+		@include font-size(1.5);
+		letter-spacing: 2px;
+	}
+	.tent-biz-hours-class {
+		p span {
+			font-weight: bold;
+		}
+	}
+	.widget_custom_html {
+		width: 100%;
+		p{
+			margin: 0 0 0.666*$base__space-unit;
+			display: flex;
+			align-items: flex-start;
+			width: 100%;
+		}
+		i {
+			width: 12%;
+			height: $base__space-unit;
+			display: inline-block;
+			display: flex;
+			align-items: center;
+		}
+		a, a:visited {
+			color: $color__brand_1;
+			text-decoration: none;
+		}
+		a:focus, a:hover {
+			color: $color__text-main;
+		}
+		
+	}
+	.widget_archive {
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			line-height: 1.75;
+		}
+		a , a:visited{
+			text-decoration: none;
+			color: $color__brand_1;
+		}
+		a:hover, a:focus {
+			color: $color__text-main;
+		}
+	}
+}
+
 
 /*--------------------------------------------------------------
 # Footer
@@ -152,18 +210,49 @@
 		width: $base__max-width;
 		padding: 2*$base__space-unit 0 $base__space-unit;
 		margin: 0 auto;
+		.footer-widget-area {
+			display: flex;
+			.widget {
+				width:280px;
+			}
+
+		}
+		.widget_custom_html {
+			p{
+				display: flex;
+				align-items: flex-start;
+				width: 100%;
+			}
+			i {
+				width: 9%;
+				height: $base__space-unit;
+				@include font-size(1.2);
+				display: inline-block;
+				display: flex;
+				align-items: center;
+			}
+		}
 		h2 {
 			color: $color__brand_3;
 			font-family: $font__secondary;
 			text-transform: uppercase;
 			@include font-size(1.2);
 		}
-		p span {
-			font-weight: bold;
+		.tent-biz-hours-class {
+			p span {
+				font-weight: bold;
+			}
 		}
 		.site-branding {
 			flex: 0 0 25%;
 			padding-top: 0.666*$base__space-unit;
+		}
+		a, a:visited {
+			color: $color__background-body;
+			text-decoration: none;
+		}
+		a:focus, a:hover {
+			text-decoration: underline;
 		}
 	}
 }
