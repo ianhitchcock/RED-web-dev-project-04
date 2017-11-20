@@ -23,6 +23,21 @@ a {
 		outline: 0;
 	}
 }
+.box-link, .box-link:visited {
+	
+	padding: 0.5*$base__space-unit $base__space-unit;
+	border: 1px solid $color__text-main;
+	text-decoration: none;
+	color: inherit;
+	font-family: $font__secondary;
+	text-transform: uppercase;
+	&:hover, &:focus{
+		color: $color__background-body;
+		background: $color__brand_1;
+		border: 1px solid $color__background-body;
+	}
+	
+}
 
 /* Menus */
 

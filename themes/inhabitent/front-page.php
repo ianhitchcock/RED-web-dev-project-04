@@ -17,7 +17,7 @@ get_header(); ?>
 				.hero-banner { 
 					background:
 					linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-					url({$image}) no-repeat center bottom;
+					url({$image}) no-repeat center;
 					background-size: cover;
 					height: 100vh;
 					width: 100vw;                         

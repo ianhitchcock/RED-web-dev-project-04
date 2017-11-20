@@ -53,9 +53,23 @@
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-
+.hero-header {
+  .site-header {
+		position: absolute;
+		background-color: rgba(255,255,255,0);
+    border: none;
+    .main-navigation {
+      a , a:visited , button {
+			color: $color__background-body;
+			font-family: $font__secondary;
+      }
+      a:focus , a:hover , button:hover {
+        color: $color__brand_4;
+      }
+    }
+	}
+}
 .site-header {
-
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -236,6 +250,7 @@
 			color: $color__brand_3;
 			font-family: $font__secondary;
 			text-transform: uppercase;
+			letter-spacing: 2px;
 			@include font-size(1.2);
 		}
 		.tent-biz-hours-class {

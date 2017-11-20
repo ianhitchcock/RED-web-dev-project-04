@@ -2,8 +2,7 @@
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
-.page-id-29 {
-  
+.home {
   .hero-banner {
     display: flex;
     justify-content: center;
@@ -80,12 +79,48 @@
         background: $color__brand_1;
         
       }
+      .entry-content {
+        margin-bottom: 3*$base__space-unit;
+        p {
+          margin-bottom: 1.333*$base__space-unit;
+        }
+      }
+      .box-link:after {
+        content: ' →';
 
-
+      }
     }
     .widget-area {
       flex: 0 0 27%;
       padding: 2.333*$base__space-unit 0 2.333*$base__space-unit 2.333*$base__space-unit;
+    }
+  }
+}
+
+/* About */
+
+.page-template-about {
+  .entry-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      @include font-size(3);
+      font-family: $font__secondary;
+      text-transform: uppercase;
+      color: $color__background-body;
+      letter-spacing: 2px;
+    }
+  }
+  .entry-content {
+    width: 800px;
+    margin: 2*$base__space-unit auto;
+    h2 {
+      @include font-size(2.1);
+      font-family: $font__secondary;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
     }
   }
 }

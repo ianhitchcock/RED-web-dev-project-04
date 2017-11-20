@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: RED Starter Theme
 Theme URI: http://underscores.me/
@@ -511,6 +512,18 @@ a {
   a:hover, a:active {
     outline: 0; }
 
+.box-link, .box-link:visited {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #404040;
+  text-decoration: none;
+  color: inherit;
+  font-family: ".", "sans-serif";
+  text-transform: uppercase; }
+  .box-link:hover, .box-link:focus, .box-link:visited:hover, .box-link:visited:focus {
+    color: #fff;
+    background: #248A83;
+    border: 1px solid #fff; }
+
 /* Menus */
 .main-navigation {
   clear: both;
@@ -693,6 +706,16 @@ a {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+.hero-header .site-header {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0);
+  border: none; }
+  .hero-header .site-header .main-navigation a, .hero-header .site-header .main-navigation a:visited, .hero-header .site-header .main-navigation button {
+    color: #fff;
+    font-family: ".", "sans-serif"; }
+  .hero-header .site-header .main-navigation a:focus, .hero-header .site-header .main-navigation a:hover, .hero-header .site-header .main-navigation button:hover {
+    color: #f0e4d1; }
+
 .site-header {
   position: fixed;
   top: 0;
@@ -882,6 +905,7 @@ a {
       color: #d99054;
       font-family: ".", "sans-serif";
       text-transform: uppercase;
+      letter-spacing: 2px;
       font-size: 19.2px;
       font-size: 1.2rem; }
     .site-footer .container .tent-biz-hours-class p span {
@@ -961,7 +985,7 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
-.page-id-29 .hero-banner {
+.home .hero-banner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -972,7 +996,7 @@ object {
       -ms-flex-align: center;
           align-items: center; }
 
-.page-id-29 .blog-preview {
+.home .blog-preview {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -987,15 +1011,15 @@ object {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap; }
-  .page-id-29 .blog-preview h1 {
+  .home .blog-preview h1 {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%; }
-  .page-id-29 .blog-preview-item {
+  .home .blog-preview-item {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 32%;
             flex: 0 0 32%; }
-    .page-id-29 .blog-preview-item .thumbnail-wrapper {
+    .home .blog-preview-item .thumbnail-wrapper {
       width: 100%;
       height: 200px;
       overflow: hidden; }
@@ -1043,8 +1067,44 @@ object {
       padding: 0.999rem 1.5rem;
       text-align: center;
       background: #248A83; }
+    .blog .site-content .content-area .entry-content {
+      margin-bottom: 4.5rem; }
+      .blog .site-content .content-area .entry-content p {
+        margin-bottom: 1.9995rem; }
+    .blog .site-content .content-area .box-link:after {
+      content: ' →'; }
   .blog .site-content .widget-area {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 27%;
             flex: 0 0 27%;
     padding: 3.4995rem 0 3.4995rem 3.4995rem; }
+
+/* About */
+.page-template-about .entry-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .page-template-about .entry-header h1 {
+    font-size: 48px;
+    font-size: 3rem;
+    font-family: ".", "sans-serif";
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px; }
+
+.page-template-about .entry-content {
+  width: 800px;
+  margin: 3rem auto; }
+  .page-template-about .entry-content h2 {
+    font-size: 33.6px;
+    font-size: 2.1rem;
+    font-family: ".", "sans-serif";
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center; }

@@ -16,7 +16,11 @@
 	<?php wp_head(); ?>
 	</head>
 
-	<body <?php body_class(); ?>>
+	<body <?php if ( is_front_page() || is_page_template( 'page_templates/about.php' ) ){
+		body_class( "hero-header" );
+	} else {
+		body_class();
+	} ?>>
 		<div id="page" class="hfeed site">
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html( 'Skip to content' ); ?></a>
 
@@ -24,7 +28,12 @@
 				<div class="container">
 					<div class="site-branding">
 						<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="nav-logo" alt="Home Page Link" src="<?php echo get_template_directory_uri()?>/images/inhabitent-logo-tent.svg"></a>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="nav-logo" alt="Home Page Link" src=<?php
+						if ( is_front_page() || is_page_template( 'page_templates/about.php' ) ){ echo get_template_directory_uri().'/images/inhabitent-logo-tent-white.svg';
+						} else {
+							echo get_template_directory_uri().'/images/inhabitent-logo-tent.svg';
+						}
+						?>></a>
 					</div><!-- .site-branding -->
 
 					<nav id="site-navigation" class="main-navigation" role="navigation">
