@@ -44,8 +44,6 @@
       border-right: $border__solid;
       .entry-header {
         position: relative;
-        font-family: $font__secondary;
-        text-transform: uppercase;
         color: $color__background-body;
         a, a:visited {
           text-decoration: none;
@@ -87,7 +85,6 @@
       }
       .box-link:after {
         content: ' →';
-
       }
     }
     .widget-area {
@@ -117,10 +114,69 @@
     margin: 2*$base__space-unit auto;
     h2 {
       @include font-size(2.1);
-      font-family: $font__secondary;
-      text-transform: uppercase;
-      letter-spacing: 2px;
       text-align: center;
     }
   }
+}
+/* contact */
+.page {
+  .site-content {
+    margin: 50px auto 0;
+    width: $base__max-width;  
+    display: flex;
+    .content-area {
+      flex: 0 0 73%;
+      padding: 2.333*$base__space-unit 2.333*$base__space-unit 2.333*$base__space-unit 0;
+      border-right: $border__solid;
+    }
+    .widget-area {
+      flex: 0 0 27%;
+      padding: 2.333*$base__space-unit 0 2.333*$base__space-unit 2.333*$base__space-unit;
+    }
+  }
+  .required:after {
+    content: ' *';
+    color: $color__brand_3;
+  }
+  .content-area {
+    h1 {
+    line-height: 1.25;
+    @include font-size(2.4);
+    margin-top: 0;
+    }
+    h2 {
+      line-height: 1.25;
+      @include font-size(2.1);
+      color: $color__brand_2;
+    } 
+    form label {
+      font-family: $font__secondary;
+      text-transform: uppercase;
+      @include font-size(1.1);
+      color: $color__brand_2;
+    }
+    form input, form textarea {
+      margin-top: 0.333*$base__space-unit;
+      background: #f4f4f4;
+      border-radius: 0;
+      border: $border__solid;
+      line-height: 1.75;
+      padding-left: 5px;
+    }
+    form .wpcf7-submit {
+      padding: 0.5*$base__space-unit $base__space-unit;
+      box-shadow: none;
+      border: 1px solid $color__background-body;
+      text-decoration: none;
+      color: $color__background-body;
+      background: $color__brand_1;
+      font-family: $font__secondary;
+      text-transform: uppercase;
+      @include font-size(0.9);
+      font-style: normal;
+      line-height: 1;
+      box-sizing: border-box;
+    }
+  }
+  
 }

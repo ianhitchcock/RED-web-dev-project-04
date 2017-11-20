@@ -152,6 +152,11 @@ function hwl_home_pagesize( $query ) {
 }
 add_action( 'pre_get_posts', 'hwl_home_pagesize', 1 );
 
-
+add_filter('body_class', function (array $classes) {
+	if ( is_front_page() || is_page_template( 'page_templates/about.php' ) ) {
+		unset( $classes[array_search('page', $classes)] );
+	}
+return $classes;
+});
 
 

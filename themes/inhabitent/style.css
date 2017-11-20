@@ -430,6 +430,11 @@ table {
   margin: 0 0 1.5rem;
   width: 100%; }
 
+h1, h2, h3 {
+  letter-spacing: 2px;
+  font-family: ".", "sans-serif";
+  text-transform: uppercase; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -514,7 +519,7 @@ a {
 
 .box-link, .box-link:visited {
   padding: 0.75rem 1.5rem;
-  border: 1px solid #404040;
+  border: 1px solid black;
   text-decoration: none;
   color: inherit;
   font-family: ".", "sans-serif";
@@ -762,7 +767,7 @@ a {
       color: #248A83;
       font-family: ".", "sans-serif"; }
     .site-header .main-navigation a:focus, .site-header .main-navigation a:hover, .site-header .main-navigation button:hover {
-      color: #404040; }
+      color: #2f1339; }
     .site-header .main-navigation ul {
       width: 21rem;
       display: -webkit-box;
@@ -800,11 +805,9 @@ a {
 # Sidebar
 --------------------------------------------------------------*/
 .widget-area h2 {
-  font-family: ".", "sans-serif";
-  text-transform: uppercase;
   font-size: 24px;
   font-size: 1.5rem;
-  letter-spacing: 2px; }
+  color: #2f1339; }
 
 .widget-area .tent-biz-hours-class p span {
   font-weight: bold; }
@@ -834,7 +837,7 @@ a {
     color: #248A83;
     text-decoration: none; }
   .widget-area .widget_custom_html a:focus, .widget-area .widget_custom_html a:hover {
-    color: #404040; }
+    color: #2f1339; }
 
 .widget-area .widget_archive ul {
   list-style: none;
@@ -849,7 +852,7 @@ a {
   color: #248A83; }
 
 .widget-area .widget_archive a:hover, .widget-area .widget_archive a:focus {
-  color: #404040; }
+  color: #2f1339; }
 
 /*--------------------------------------------------------------
 # Footer
@@ -862,9 +865,7 @@ a {
       background: url("../../images/dark-wood@2x.png"); } }
   .site-footer .site-info {
     padding: 1.5rem;
-    text-align: center;
-    font-family: ".", "sans-serif";
-    text-transform: uppercase; }
+    text-align: center; }
   .site-footer .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -903,9 +904,6 @@ a {
               align-items: center; }
     .site-footer .container h2 {
       color: #d99054;
-      font-family: ".", "sans-serif";
-      text-transform: uppercase;
-      letter-spacing: 2px;
       font-size: 19.2px;
       font-size: 1.2rem; }
     .site-footer .container .tent-biz-hours-class p span {
@@ -1039,8 +1037,6 @@ object {
     border-right: 1px solid #e1e1e1; }
     .blog .site-content .content-area .entry-header {
       position: relative;
-      font-family: ".", "sans-serif";
-      text-transform: uppercase;
       color: #fff; }
       .blog .site-content .content-area .entry-header a, .blog .site-content .content-area .entry-header a:visited {
         text-decoration: none;
@@ -1104,7 +1100,71 @@ object {
   .page-template-about .entry-content h2 {
     font-size: 33.6px;
     font-size: 2.1rem;
-    font-family: ".", "sans-serif";
-    text-transform: uppercase;
-    letter-spacing: 2px;
     text-align: center; }
+
+/* contact */
+.page .site-content {
+  margin: 50px auto 0;
+  width: 1120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .page .site-content .content-area {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 73%;
+            flex: 0 0 73%;
+    padding: 3.4995rem 3.4995rem 3.4995rem 0;
+    border-right: 1px solid #e1e1e1; }
+  .page .site-content .widget-area {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 27%;
+            flex: 0 0 27%;
+    padding: 3.4995rem 0 3.4995rem 3.4995rem; }
+
+.page .required:after {
+  content: ' *';
+  color: #d99054; }
+
+.page .content-area h1 {
+  line-height: 1.25;
+  font-size: 38.4px;
+  font-size: 2.4rem;
+  margin-top: 0; }
+
+.page .content-area h2 {
+  line-height: 1.25;
+  font-size: 33.6px;
+  font-size: 2.1rem;
+  color: #2f1339; }
+
+.page .content-area form label {
+  font-family: ".", "sans-serif";
+  text-transform: uppercase;
+  font-size: 17.6px;
+  font-size: 1.1rem;
+  color: #2f1339; }
+
+.page .content-area form input, .page .content-area form textarea {
+  margin-top: 0.4995rem;
+  background: #f4f4f4;
+  border-radius: 0;
+  border: 1px solid #e1e1e1;
+  line-height: 1.75;
+  padding-left: 5px; }
+
+.page .content-area form .wpcf7-submit {
+  padding: 0.75rem 1.5rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #fff;
+  text-decoration: none;
+  color: #fff;
+  background: #248A83;
+  font-family: ".", "sans-serif";
+  text-transform: uppercase;
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  font-style: normal;
+  line-height: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }

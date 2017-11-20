@@ -68,3 +68,8 @@ table {
 	margin: 0 0 $base__space-unit;
 	width: 100%;
 }
+h1, h2, h3, {
+	letter-spacing: 2px;
+	font-family: $font__secondary;
+	text-transform: uppercase;
+}

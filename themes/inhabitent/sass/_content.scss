@@ -109,7 +109,7 @@
 			font-family: $font__secondary;
 		}
 		a:focus , a:hover , button:hover {
-			color: $color__text-main;
+			color: $color__brand_2;
 		}
 		ul {
 			width: 14*$base__space-unit;
@@ -146,10 +146,8 @@
 --------------------------------------------------------------*/
 .widget-area {
 	h2 {
-		font-family: $font__secondary;
-		text-transform: uppercase;
 		@include font-size(1.5);
-		letter-spacing: 2px;
+		color: $color__brand_2;
 	}
 	.tent-biz-hours-class {
 		p span {
@@ -176,7 +174,7 @@
 			text-decoration: none;
 		}
 		a:focus, a:hover {
-			color: $color__text-main;
+			color: $color__brand_2;
 		}
 		
 	}
@@ -194,7 +192,7 @@
 			color: $color__brand_1;
 		}
 		a:hover, a:focus {
-			color: $color__text-main;
+			color: $color__brand_2;
 		}
 	}
 }
@@ -215,8 +213,6 @@
 	.site-info {
 		padding: $base__space-unit;
 		text-align: center;
-		font-family: $font__secondary;
-		text-transform: uppercase;
 	}
 	.container {
 		display: flex;
@@ -248,9 +244,6 @@
 		}
 		h2 {
 			color: $color__brand_3;
-			font-family: $font__secondary;
-			text-transform: uppercase;
-			letter-spacing: 2px;
 			@include font-size(1.2);
 		}
 		.tent-biz-hours-class {
