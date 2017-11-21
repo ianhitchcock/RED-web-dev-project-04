@@ -2,8 +2,6 @@
 
 a project in WordPress
 
-##### [GitHub Pages](https://htichcock.github.io/RED-web-dev-project-04/)
-
 ![inhabitent screenshot](https://i.imgur.com/yWdFcFv.jpg)
 
 ## New technologies used
