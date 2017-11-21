@@ -1,21 +1,23 @@
-# RED Starter
+# Inhabitent 
 
-A WordPress starter theme for RED Academy students, forked from Underscores.
+a project in WordPress
 
-## Installation
+##### [GitHub Pages](https://htichcock.github.io/RED-web-dev-project-04/)
 
-### 1. Download me (don't clone me!)
+![inhabitent screenshot](https://i.imgur.com/yWdFcFv.jpg)
 
-Then add me to your `wp-content` directory.
+## New technologies used
 
-### 2. Rename the `redstarter-master` directory
+Word press and a little bit of php
 
-Make sure that the theme directory name is project appropriate!
+## Personal learnings
 
-### 3. Install the dev dependencies
+Beyond learning a bunch about Word Press, I found that I understand CSS flexbox better, as well as a basic understanding of the system architecture of a site and server.
 
-Next you'll need to run `npm install` **inside your theme directory** next to install the node modules you'll need for Gulp, etc.
+I found it very challenging to keep my css organized, and the more I added, the messier it got. I think in the future I will refactor when refactoring is a small job, not a huge job at the end.
 
-### 4. Update the proxy in `gulpfile.js`
+## To Do
 
-Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so change `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
+- Tidy and restructure scss (sorry its such a mess)
+- do adventure custom post type
+- make the contect widget more user friendly
