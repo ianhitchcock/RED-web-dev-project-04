@@ -105,7 +105,7 @@
 			background-color: inherit;
 			box-shadow: none;
 		}
-		a , a:visited , {
+		a , a:visited {
 			color: $color__brand_1;
 			font-family: $font__secondary;
 		}
@@ -120,7 +120,7 @@
 			text-transform: uppercase;
 			padding-left: 1.25*$base__space-unit;
 		}
-		fieldset {
+		.fieldset {
 			display: flex;
 			label {
 				order: 2;
@@ -128,7 +128,7 @@
 				overflow: hidden;
 				transition: 0.5s;
 				input::placeholder {
-					color:  inherit;
+					color: inherit;
 					text-transform: uppercase;
 					font-family: $font__secondary;
 				}
@@ -137,7 +137,7 @@
 					color:  inherit;
 				}
 			}
-			a {
+			.search-submit {
 				order: 0;
 				padding-left: $base__space-unit;
 				@include font-size(1);
