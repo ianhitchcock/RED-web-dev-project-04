@@ -20,14 +20,14 @@
     var dToTop = $(window).scrollTop(); 
     if (dToTop >= $(window).height()) {
       $('.hero-header-ph').removeClass('hero-header');
-      $('.hero-header-ph .nav-logo').attr('src', function() {
-        return $('.hero-header-ph .nav-logo').attr('src').toString().replace('-white', '');
+      $('.hero-header-ph .site-header .nav-logo').attr('src', function() {
+        return $('.hero-header-ph .site-header .nav-logo').attr('src').toString().replace('-white', '');
       });
     }
     if (dToTop < $(window).height()) {
       $('.hero-header-ph').addClass('hero-header');
-      $('.hero-header-ph .nav-logo').attr('src', function() {
-        return $('.hero-header-ph .nav-logo').attr('src').toString().replace('tent.svg', 'tent-white.svg');
+      $('.hero-header-ph .site-header .nav-logo').attr('src', function() {
+        return $('.hero-header-ph .site-header .nav-logo').attr('src').toString().replace('tent.svg', 'tent-white.svg');
       });
     }
   });
