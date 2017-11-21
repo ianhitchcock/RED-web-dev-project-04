@@ -74,7 +74,35 @@ get_header(); ?>
 					</div>
 				</div>
 			<?php endforeach; wp_reset_postdata(); ?>
-			</div>  
+			</div>
+			<div class="adventures-preview">
+				<h2>Adventures</h2>
+				<div class="container">
+					<div class="adventure-1">
+						<h3>Getting Back to Nature in a Canoe</h3>
+						<a class="box-link" href="">Read More</a>
+					</div>
+					<div class="container">
+						<div class="adventure-2">
+							<h3>A Night with Friends at the Beach</h3>
+							<a class="box-link" href="">Read More</a>
+						</div>
+						<div class="container">
+							<div class="adventure-3">
+								<h3>Taking in the View at Big Mountain</h3>
+								<a class="box-link" href="">Read More</a>
+							</div>
+							<div class="adventure-4">
+								<h3>Star-Gazing at the Night Sky</h3>
+								<a class="box-link" href="">Read More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="more-adventures">
+					<a class="box-link" href="">More Adventures</a>
+				</div>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 <?php get_footer(); ?>

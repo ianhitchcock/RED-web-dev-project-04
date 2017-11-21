@@ -101,6 +101,95 @@
       }
     }
   }
+  .adventures-preview {
+    width: $base__max-width;
+    margin: 0 auto 2*$base__space-unit;
+    h2 {
+      text-align: center;
+      text-align: center;
+      font-weight: 400;
+      @include font-size(2.4);
+      margin-bottom: 2.5*$base__space-unit;
+    }
+    .more-adventures {
+      @include box-link-alt-1;
+      margin-top: 1.666*$base__space-unit;
+    }
+    .container {
+      h3 {
+        @include font-size(3);
+        font-family: $font__main;
+        font-weight: 400;
+        text-transform: none;
+        color: $color__background-body;
+        margin-top: 0;
+        line-height: 1.25;
+        &:hover, &:focus {
+         color: $color__brand_4;
+        }
+      }
+      display: flex;
+      width: 100%;
+      height: 540px;
+      justify-content: space-between;
+      .box-link {
+        color: $color__background-body;
+        border-color: $color__background-body;
+      }
+      .adventure-1 {
+        flex: 0 0 540px;
+        height: 540px;
+        width: 540px;
+        padding: 20px;
+        background:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url('../../images/canoe-girl.jpg') no-repeat center bottom/cover;
+      }
+      .container {
+        justify-content: space-between;
+        display: flex;
+        flex: 0 0 560px;
+        flex-direction: column;
+        .adventure-2 {
+          h3 {
+            @include font-size(2.4);
+          }
+          flex: 0 0 250px;
+          padding: 20px;
+          height: 250px;
+          width: 560px;
+          background:
+          linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+          url('../../images/beach-bonfire.jpg') no-repeat center bottom/cover;
+        }
+        .container {
+          justify-content: space-between;
+          display: flex;
+          flex: 0 0 270px;
+          flex-direction: row;
+          .adventure-3 , .adventure-4 {
+            h3 {
+              @include font-size(1.6);
+            }
+            flex: 0 0 270px;
+            padding: 20px;
+            height: 270px;
+            width: 270px;
+          }
+          .adventure-3 {
+            background:
+            linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+            url('../../images/mountain-hikers.jpg') no-repeat center bottom/cover;
+          }
+          .adventure-4 {
+            background:
+            linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+            url('../../images/night-sky.jpg') no-repeat center bottom/cover;
+          }
+        }
+      }
+    }
+  }
 }
 
 /* single post*/

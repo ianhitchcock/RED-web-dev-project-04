@@ -51,6 +51,7 @@ get_header(); ?>
 
 				<div class="entry-content">
 					<span class="title"><?php the_title(); ?></span>
+					<div></div>
 					<span class="price"><?php echo CFS()->get( 'price' ) ?></span>
 				</div><!-- .entry-content -->
 			</article><!-- #post-## -->
