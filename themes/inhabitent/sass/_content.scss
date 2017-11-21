@@ -57,13 +57,14 @@
   .site-header {
 		position: absolute;
 		background-color: rgba(255,255,255,0);
-    border: none;
+		border: none;
+		color: $color__background-body; // for inherit on search
     .main-navigation {
-      a , a:visited , button {
+      a , a:visited{
 			color: $color__background-body;
 			font-family: $font__secondary;
       }
-      a:focus , a:hover , button:hover {
+      a:focus , a:hover{
         color: $color__brand_4;
       }
     }
@@ -104,11 +105,11 @@
 			background-color: inherit;
 			box-shadow: none;
 		}
-		a , a:visited , button {
+		a , a:visited , {
 			color: $color__brand_1;
 			font-family: $font__secondary;
 		}
-		a:focus , a:hover , button:hover {
+		a:focus , a:hover {
 			color: $color__brand_2;
 		}
 		ul {
@@ -121,20 +122,31 @@
 		}
 		fieldset {
 			display: flex;
-			& label {
+			label {
 				order: 2;
-				display: none;
+				width: 0;
+				overflow: hidden;
 				transition: 0.5s;
+				input::placeholder {
+					color:  inherit;
+					text-transform: uppercase;
+					font-family: $font__secondary;
+				}
+				input {
+					padding-left: 0.666*$base__space-unit;
+					color:  inherit;
+				}
 			}
-			button {
+			a {
 				order: 0;
 				padding-left: $base__space-unit;
 				@include font-size(1);
+				text-shadow: unset;
 			}
 			//to override
-			.button-toggled {
-					& label {
-						display: initial;
+			&.button-toggled {
+					label {
+						width: 200px;
 					}
 			}
 		}
@@ -185,7 +197,7 @@
 			padding: 0;
 		}
 		li {
-			line-height: 1.75;
+			line-height: $font__line-height;
 		}
 		a , a:visited{
 			text-decoration: none;
@@ -264,3 +276,4 @@
 		}
 	}
 }
+

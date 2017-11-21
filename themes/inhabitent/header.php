@@ -17,7 +17,9 @@
 	</head>
 
 	<body <?php if ( is_front_page() || is_page_template( 'page_templates/about.php' ) ){
-		body_class( "hero-header" );
+		body_class( "hero-header hero-header-ph" );
+	} elseif ( is_search() || is_404() ) {
+		body_class( "page" );
 	} else {
 		body_class();
 	} ?>>

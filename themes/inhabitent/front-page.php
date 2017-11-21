@@ -41,7 +41,7 @@ get_header(); ?>
 									<div class="product-type-block-wrapper">
 										<img src="<?php echo get_template_directory_uri() . '/images/' . $term->slug; ?>.svg" alt="<?php echo $term->name; ?>" />
 										<p><?php echo $term->description; ?></p>
-										<p><a href="<?php echo get_term_link( $term ); ?>" class="btn"><?php echo $term->name; ?> Stuff</a></p>
+										<p><a href="<?php echo get_term_link( $term ); ?>" class="box-link"><?php echo $term->name; ?> Stuff</a></p>
 									</div>
 
 							<?php endforeach; ?>
@@ -52,11 +52,11 @@ get_header(); ?>
 			</section>
 
 		<?php
-			$post_args = array( 'post_type' => 'post', 'order' => 'ASC', 'posts_per_page'=> '3' );
+			$post_args = array( 'post_type' => 'post', 'order' => 'DSC', 'posts_per_page'=> '3' );
 			$posts = get_posts( $post_args ); // returns an array of posts
 		?>
 			<div class="blog-preview">
-				<h1>Inhabitent Journal</h1>
+				<h2>Inhabitent Journal</h2>
 			<?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
 				<div class="blog-preview-item">
 					<div class="thumbnail-wrapper">
@@ -64,12 +64,14 @@ get_header(); ?>
 						<?php the_post_thumbnail( 'large' ); ?>
 					<?php endif; ?>
 					</div>
-					
-					<?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> 
+					<div class="post-info">
+						<div class="post-meta">
+							<?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> 
+						</div>
+						<a href="<?php the_permalink() ?>"><h3><?php the_title() ?></h3></a>
 
-					<h2><?php the_title() ?></h2>
-
-					<a href="<?php the_permalink() ?>">Read More</a>
+						<a class="box-link" href="<?php the_permalink() ?>">Read Entry</a>
+					</div>
 				</div>
 			<?php endforeach; wp_reset_postdata(); ?>
 			</div>  

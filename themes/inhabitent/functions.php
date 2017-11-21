@@ -98,6 +98,7 @@ function inhabitent_scripts() {
 	wp_enqueue_style( 'inhabitent-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'inhabitent-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
+	wp_enqueue_script( 'index', get_template_directory_uri() . '/build/js/index.min.js', array(), false, true );
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -116,16 +117,16 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/extras.php';
 
-//filter to only products on search
-function search_filter($query) {
+//filter to only products for product tax
+function product_archive_filter($query) {
   if ( !is_admin() && $query->is_main_query() ) {
-    if ($query->is_search) {
-      $query->set('post_type', 'products');
+    if ( is_tax( 'product-type' ) ) {
+      $query->set('post_type', 'product');
     }
   }
 }
 
-add_action('pre_get_posts','search_filter');
+add_action('pre_get_posts','product_archive_filter');
 
 
 function hwl_home_pagesize( $query ) {
@@ -133,30 +134,37 @@ function hwl_home_pagesize( $query ) {
 			return;
 
 	if ( is_home() ) {
-			// Display only 1 post for the original blog archive
+			// Display only 5 post for the original blog archive
 			$query->set( 'posts_per_page', 5 );
 			return;
 	}
 
 	if ( is_search() ) {
-		// Display only 10 post for the search
+		// Display only 10 post for the search search prducts too!
 		$query->set( 'posts_per_page', 10 );
+		$query->set( 'post_type', array( 'post' , 'product' ) );
 		return;
 	}
 
 	if ( is_post_type_archive( 'product' ) ) {
-			// Display 50 posts for a custom post type called products
+			// Display 16 posts for a custom post type called products
 			$query->set( 'posts_per_page', 16 );
 			return;
 	}
 }
 add_action( 'pre_get_posts', 'hwl_home_pagesize', 1 );
 
-add_filter('body_class', function (array $classes) {
+//remove more broad classes for less styling conflicts
+function remove_broad_classes( $classes ) {
 	if ( is_front_page() || is_page_template( 'page_templates/about.php' ) ) {
-		unset( $classes[array_search('page', $classes)] );
+		unset( $classes[array_search( 'page', $classes)] );
+	}
+	if ( is_post_type_archive( 'product' ) || is_tax( 'product-type' ) ) {
+		unset( $classes[array_search( 'archive', $classes)] );
+	}
+	if ( is_singular( 'product' ) ) {
+		unset( $classes[array_search( 'single', $classes)] );
 	}
 return $classes;
-});
-
-
+}
+add_filter('body_class', 'remove_broad_classes' );

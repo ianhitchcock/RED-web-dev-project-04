@@ -28,7 +28,7 @@ a {
 	padding: 0.5*$base__space-unit $base__space-unit;
 	border: 1px solid black;
 	text-decoration: none;
-	color: inherit;
+	color: black;
 	font-family: $font__secondary;
 	text-transform: uppercase;
 	&:hover, &:focus{
@@ -37,6 +37,52 @@ a {
 		border: 1px solid $color__background-body;
 	}
 	
+}
+/*--------------------------------------------------------------
+# pagination
+--------------------------------------------------------------*/
+.search-pagination {
+	border-top: $border__solid;
+	margin-top: 3*$base__space-unit;
+	padding-top: $base__space-unit;
+	.page-numbers {
+		a, span {
+			line-height: 0;
+			padding: 0.333*$base__space-unit 0.5*$base__space-unit;
+		}
+		padding: 0.333*$base__space-unit 0.5*$base__space-unit;
+		line-height: 1;
+		text-decoration: none;
+		color: $color__background-body;
+		font-family: $font__secondary;
+		text-transform: uppercase;
+		background: $color__brand_1;
+		&:hover:not(.current) , &:focus:not(.current) {
+			background-color: $color__brand_2;
+		}
+		&.current {
+			background: gray;
+		}
+	}
+}
+.posts-navigation {
+	.nav-previous , .nav-next {
+		a , a:visited {
+			line-height: 0;
+			padding: 0.333*$base__space-unit 0.5*$base__space-unit;
+		
+			padding: 0.333*$base__space-unit 0.5*$base__space-unit;
+			line-height: 1;
+			text-decoration: none;
+			color: $color__background-body;
+			font-family: $font__secondary;
+			text-transform: uppercase;
+			background: $color__brand_1;
+			&:hover , &:focus {
+				background-color: $color__brand_2;
+			}
+		}
+	}
 }
 
 /* Menus */

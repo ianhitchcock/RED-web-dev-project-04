@@ -11,3 +11,13 @@
 	margin-right: auto;
 }
 
+@mixin box-link-alt-1 {
+	.box-link , .box-link:visited {
+		border-color: $color__background-body;
+		color: $color__background-body;
+		background: $color__brand_1;
+		&:hover , &:focus {
+			background-color: darken($color__brand_1, 10%);
+		}
+	}
+}
