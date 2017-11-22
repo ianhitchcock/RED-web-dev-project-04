@@ -4,6 +4,11 @@
 
 /* Buttons */
 
+// hide search button on all but header
+.site-content .search-submit {
+	display: none;
+}
+
 button,
 input[type="button"],
 input[type="reset"],

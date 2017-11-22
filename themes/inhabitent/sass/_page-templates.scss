@@ -194,6 +194,25 @@
 
 /* single post*/
 .single {
+  #cancel-comment-reply-link  {
+    flex: 0 0 50%;
+    padding: 0.5*$base__space-unit $base__space-unit;
+    box-shadow: none;
+    border: 1px solid $color__background-body;
+    text-decoration: none;
+    color: $color__background-body;
+    background: $color__brand_1;
+    font-family: $font__secondary;
+    text-transform: uppercase;
+    @include font-size(0.9);
+    font-style: normal;
+    line-height: 1;
+    box-sizing: border-box;
+    text-shadow: unset;
+    &:hover , &:focus {
+      background-color: darken($color__brand_1, 10%);
+    }
+  }
   h1 {
     position: absolute;
     margin-top:1.5*$base__space-unit;
@@ -236,7 +255,7 @@
       flex: 0 0 100%;
       margin: 0.666*$base__space-unit 0;
     }
-    .logged-in-as {
+    .logged-in-as, {
       display: flex;
       a , a:visited{
         flex: 0 0 50%;
@@ -259,6 +278,7 @@
         }
       }
     }
+    
     .comment-form-author ,
     .comment-form-email {
       flex: 0 0 48%;

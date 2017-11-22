@@ -442,6 +442,9 @@ body, button, input, select, textarea {
 # Forms
 --------------------------------------------------------------*/
 /* Buttons */
+.site-content .search-submit {
+  display: none; }
+
 button,
 input[type="button"],
 input[type="reset"],
@@ -1263,6 +1266,29 @@ object {
           background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/night-sky.jpg") no-repeat center bottom/cover; }
 
 /* single post*/
+.single #cancel-comment-reply-link {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  padding: 0.75rem 1.5rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #fff;
+  text-decoration: none;
+  color: #fff;
+  background: #248A83;
+  font-family: "Novecento", "sans-serif";
+  text-transform: uppercase;
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  font-style: normal;
+  line-height: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-shadow: unset; }
+  .single #cancel-comment-reply-link:hover, .single #cancel-comment-reply-link:focus {
+    background-color: #19625d; }
+
 .single h1 {
   position: absolute;
   margin-top: 2.25rem;
