@@ -753,6 +753,9 @@ a {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+.admin-bar {
+  margin-top: 30px; }
+
 .hero-header .site-header {
   position: absolute;
   background-color: rgba(255, 255, 255, 0);
