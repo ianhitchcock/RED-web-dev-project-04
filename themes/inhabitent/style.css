@@ -753,7 +753,7 @@ a {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-.admin-bar {
+.addymin {
   margin-top: 30px; }
 
 .hero-header .site-header {
@@ -852,7 +852,8 @@ a {
           font-family: "Novecento", "sans-serif"; }
         .site-header .main-navigation .fieldset label input {
           padding-left: 0.999rem;
-          color: inherit; }
+          color: inherit;
+          outline-color: #f0e4d1; }
       .site-header .main-navigation .fieldset .search-submit {
         -webkit-box-ordinal-group: 1;
             -ms-flex-order: 0;
@@ -862,7 +863,9 @@ a {
         font-size: 1rem;
         text-shadow: unset; }
       .site-header .main-navigation .fieldset.button-toggled label {
-        width: 200px; }
+        width: 200px;
+        overflow: visible;
+        margin-left: 5px; }
 
 /*--------------------------------------------------------------
 # Sidebar
