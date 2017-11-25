@@ -5,24 +5,25 @@
 
 @font-face {
   font-family: 'Novecento';
-  src: url('../../fonts/e8232db5cf67354700e497bb26f722b3.eot');
+  src: url('../../fonts/novecentosanswide-normal-webfont.eot');
   src: local('Novecento'), local('Novecento'),
-      url('../../fonts/e8232db5cf67354700e497bb26f722b3.eot?#iefix') format('embedded-opentype'),
-      url('../../fonts/e8232db5cf67354700e497bb26f722b3.woff') format('woff'),
-      url('../../fonts/e8232db5cf67354700e497bb26f722b3.ttf') format('truetype'),
-      url('../../fonts/e8232db5cf67354700e497bb26f722b3.svg#.') format('svg');
+      url('../../fonts/novecentosanswide-normal-webfont.eot?#iefix') format('embedded-opentype'),
+      url('../../fonts/novecentosanswide-normal-webfont.woff') format('woff'),
+      url('../../fonts/novecentosanswide-normal-webfont.ttf') format('truetype'),
+      url('../../fonts/novecentosanswide-normal-webfont.svg#.') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Novecento';
-  src: url('../../fonts/fa603cb512c34b1f24899b7fec80b939.eot');
+  src: url('../../fonts/novecentosanswide-demibold-webfont.eot');
   src: local('Novecento'), local('Novecento'),
-      url('../../fonts/fa603cb512c34b1f24899b7fec80b939.eot?#iefix') format('embedded-opentype'),
-      url('../../fonts/fa603cb512c34b1f24899b7fec80b939.woff') format('woff'),
-      url('../../fonts/fa603cb512c34b1f24899b7fec80b939.ttf') format('truetype'),
-      url('../../fonts/fa603cb512c34b1f24899b7fec80b939.svg#.') format('svg');
+      url('../../fonts/novecentosanswide-demibold-webfont.eot?#iefix') format('embedded-opentype'),
+      url('../../fonts/novecentosanswide-demibold-webfont.woff') format('woff'),
+      url('../../fonts/novecentosanswide-demibold-webfont.woff2') format('woff2'),
+      url('../../fonts/novecentosanswide-demibold-webfont.ttf') format('truetype'),
+      url('../../fonts/novecentosanswide-demibold-webfont.svg#.') format('svg');
   font-weight: bold;
   font-style: normal;
 }
@@ -112,18 +113,6 @@
 }
 
 @font-face {
-  font-family: 'Novecento';
-  src: url('../../fonts/9dcf71dcc49a77fcfe3a9a8310ef5a21.eot');
-  src: local('Novecento'), local('Novecento'),
-      url('../../fonts/9dcf71dcc49a77fcfe3a9a8310ef5a21.eot?#iefix') format('embedded-opentype'),
-      url('../../fonts/9dcf71dcc49a77fcfe3a9a8310ef5a21.woff') format('woff'),
-      url('../../fonts/9dcf71dcc49a77fcfe3a9a8310ef5a21.ttf') format('truetype'),
-      url('../../fonts/9dcf71dcc49a77fcfe3a9a8310ef5a21.svg#.') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'Merriweather';
   src: url('../../fonts/Merriweather-BoldItalic_1.eot');
   src: local('Merriweather Bold Italic'), local('Merriweather-BoldItalic'),
@@ -135,14 +124,3 @@
   font-style: italic;
 }
 
-@font-face {
-  font-family: 'Novecento';
-  src: url('../../fonts/5463a23ec07b6db6385cb1b5058ffd46.eot');
-  src: local('Novecento'), local('Novecento'),
-      url('../../fonts/5463a23ec07b6db6385cb1b5058ffd46.eot?#iefix') format('embedded-opentype'),
-      url('../../fonts/5463a23ec07b6db6385cb1b5058ffd46.woff') format('woff'),
-      url('../../fonts/5463a23ec07b6db6385cb1b5058ffd46.ttf') format('truetype'),
-      url('../../fonts/5463a23ec07b6db6385cb1b5058ffd46.svg#.') format('svg');
-  font-weight: bold;
-  font-style: normal;
-}
