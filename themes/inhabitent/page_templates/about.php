@@ -17,8 +17,10 @@ get_header(); ?>
 
 			<div class="entry-content">
 
-				<?php the_post(); ?>
-				<?php the_content(); ?>
+				<h2>Our Story</h2>
+				<?php echo CFS()->get( 'about_our_story' ); ?>
+				<h2>Our Team</h2>
+				<?php echo CFS()->get( 'about_our_team' ); ?>
 			
 			</div><!-- .entry-content -->
 		</article><!-- #post-## -->
