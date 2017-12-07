@@ -20,7 +20,7 @@
 					</div><!-- .site-branding -->
 				</div>
 				<div class="site-info">
-					Copyright © 2016 Inhabitent
+					Copyright &copy; 2016 Inhabitent
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		</div><!-- #page -->

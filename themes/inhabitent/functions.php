@@ -35,6 +35,8 @@ function inhabitent_setup() {
 		'caption',
 	) );
 
+	load_theme_textdomain('inhabitent');
+
 }
 endif; // inhabitent_setup
 add_action( 'after_setup_theme', 'inhabitent_setup' );
